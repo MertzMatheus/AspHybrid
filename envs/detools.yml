@@ -1,0 +1,13 @@
+# Differential expression (step 11: deseq2_strains.R) and publication figures (figures/enrichment_figures.R)
+# Create:  micromamba create -f envs/detools.yml -p /path/to/software/envs/DEtools
+name: DEtools
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - r-base>=4.1
+  - bioconductor-deseq2
+  - bioconductor-apeglm
+  - r-ggplot2
+  - r-scales
+  - r-readxl

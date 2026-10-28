@@ -1,0 +1,57 @@
+# ---- results and large data: never commit them (deposit reads in SRA, results in Zenodo) ----
+final_results/
+Results/
+results/
+work/
+tmp/
+logs/
+*.log
+nohup.out
+
+# sequencing and alignment files
+*.fastq
+*.fastq.gz
+*.fq
+*.fq.gz
+*.bam
+*.bam.bai
+*.bai
+*.cram
+*.sam
+*.paf
+
+# genomes, annotations and databases (download or deposit instead)
+db/
+Genomes/
+*.fasta
+*.fasta.gz
+*.fa
+*.fa.gz
+*.fna
+*.fna.gz
+*.faa
+*.gff
+*.gff3
+*.gtf
+*.dmnd
+*.db
+*.ht2
+*.fai
+
+# tables and figures produced by the pipeline
+*.xlsx
+*.pdf
+*.png
+*.tiff
+!docs/img/*.png
+
+# environments, caches, editors
+software/
+.cache/
+__pycache__/
+*.pyc
+.Rhistory
+.RData
+.Rproj.user/
+.DS_Store
+*.swp

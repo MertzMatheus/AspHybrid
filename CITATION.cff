@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+message: "If you use this workflow or its results, please cite the article below and this repository."
+title: "AspHybrid: comparative genomics and transcriptomics of the allodiploid hybrid Aspergillus latus and its relatives during interaction with macrophages"
+type: software
+version: "1.0.0"
+date-released: "2026-01-01"            # replace with the release date
+license: MIT
+repository-code: "https://github.com/MertzMatheus/AspHybrid"
+doi: "10.5281/zenodo.0000000"           # replace with the Zenodo DOI of the release
+keywords:
+  - Aspergillus fumigatus
+  - Aspergillus latus
+  - Aspergillus spinulosporus
+  - allodiploid hybrid
+  - RNA-seq
+  - macrophage interaction
+  - subgenome
+  - genome annotation
+  - orthology
+authors:
+  - family-names: "Surname"             # one block per author
+    given-names: "Given names"
+    affiliation: "Institution"
+    orcid: "https://orcid.org/0000-0000-0000-0000"
+preferred-citation:
+  type: article
+  title: "Article title"
+  authors:
+    - family-names: "Surname"
+      given-names: "Given names"
+  journal: "Journal"
+  year: 2026
+  doi: "10.0000/journal.0000000"

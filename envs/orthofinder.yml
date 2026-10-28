@@ -1,0 +1,8 @@
+# Orthology (step 07). The pipeline calls this environment by name (ENV_ORTHO in config.sh).
+# Create:  micromamba create -f envs/orthofinder.yml
+name: Hibrid
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - orthofinder=3.1.5

@@ -1,0 +1,24 @@
+# Main tool environment (steps 01, 03, 05, 06, 08, 10, 09 and the Python helpers)
+# Create:  micromamba create -f envs/annottools.yml -p /path/to/software/envs/AnnotTools
+# Record the exact versions you used:  micromamba env export -p <env> > envs/annottools.lock.yml
+name: AnnotTools
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python>=3.10
+  - numpy
+  - scipy
+  - matplotlib
+  - openpyxl
+  - busco=6.1.0
+  - hisat2
+  - samtools
+  - fastp
+  - minimap2
+  - subread            # featureCounts
+  - gffread
+  - seqkit
+  - diamond
+  - eggnog-mapper
+  - wget

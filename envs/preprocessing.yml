@@ -1,0 +1,9 @@
+# Read pre-processing (preprocessing/)
+# Create:  micromamba create -f envs/preprocessing.yml
+name: rnaseq_sa_ca
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - fastp
+  - sortmerna
