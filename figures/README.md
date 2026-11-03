@@ -2,29 +2,33 @@
 
 | Script | Figures | Input |
 |---|---|---|
-| `paper_figures.R` | Fig. 1–5 of the article | Supplementary Tables 2 and 3 |
-| `enrichment_figures.R` | Fig. 6 (enrichment) | curated enrichment sheet of Supplementary Table 3 |
+| `paper_figures.R` | every panel of Fig. 1–4 and Supplementary Figs 1–2, one file per panel | Supplementary Tables 2 and 3; optionally the pipeline's `final_results/11_differential_expression` |
+| `enrichment_figures.R` | alternative enrichment dot plots of the curated panel | curated enrichment sheet of Supplementary Table 3 |
 
 ## paper_figures.R
 
 ```bash
-Rscript paper_figures.R Supplementary_Tables_2.xlsx Supplementary_Tables_3.xlsx [output folder]
+Rscript paper_figures.R Supplementary_Tables_2.xlsx Supplementary_Tables_3.xlsx \
+        /path/to/project/final_results/11_differential_expression  [output folder]
 ```
 
-| Figure | Panels |
+Use `NA` as the third argument to skip the PCA and volcano plots (they need
+`<species>/deseq2/vst.tsv`, `samples_used.tsv` and `DE_<strain>.tsv` from step 11).
+
+| Figure | Panels (one file each, in `Paper_figures/FigN/`) |
 |---|---|
-| `Fig1_genomes` | a genome size and gene number; b BUSCO of genomes and proteomes; c *A. latus* S/Q subgenomes; d orthology of *A. fumigatus* genes with the other species; e orthogroups shared (UpSet) |
-| `Fig2_rnaseq` | a alignment and gene assignment per library; b up/down DEGs per strain |
-| `Fig3_cross_species` | a DEGs shared by the three species or lineage-specific; b Jaccard similarity of the responses (same direction); c DEGs shared between species (UpSet, *A. fumigatus* orthologues) |
-| `Fig4_genes` | log2FC heatmap: conserved core (same direction in all six strains), *A. fumigatus*-only and *Nidulantes*-only genes |
-| `Fig5_hybrid` | a subgenome of *A. latus* DEGs vs genome; b response of S–Q homeolog pairs |
+| Fig. 1 – annotation and gene sharing | a genes and locus-tag prefixes; b BUSCO of genomes and proteomes; c functional annotation coverage; d COG categories; e orthology of *A. fumigatus* genes; f orthogroups shared (UpSet); g gene sharing per proteome |
+| Fig. 2 – RNA-seq | a PCA per species; b DEGs per strain; c volcano per strain; d DEGs shared between strains of a species (UpSet) |
+| Fig. 3 – enrichment | a top terms per strain (up and down); b terms recurring across strains |
+| Fig. 4 – comparison through *A. fumigatus* orthologues | a DEGs in shared or lineage-specific genes; b DEGs of each strain against *A. fumigatus*; c Jaccard similarity; d DEGs shared between species (UpSet); e conserved and lineage-specific genes (heatmap) |
+| Supplementary | S1 read alignment and assignment; S2 *A. latus* subgenomes (genome, DEGs, homeolog pairs) |
 
 DEGs of *A. spinulosporus* and *A. latus* are compared through their *A. fumigatus*
 orthologues (column `A_fumigatus_orthologs` of the DEG sheets), on the 8,223
-*A. fumigatus* genes that have orthologues in both other species. The folder also
-receives one CSV per panel (the data as plotted) and `figure_numbers.txt`, with
-every number quoted in the Results. Needs R ≥ 4.1 with readxl, ggplot2, patchwork
-and scales.
+*A. fumigatus* genes that have orthologues in both other species. Each panel is
+saved as PDF and PNG (add `"tiff"` to `FORMATS` for 600 dpi TIFF) with a CSV of the
+plotted data; `figure_numbers.txt` lists every number quoted in the Results.
+Needs R ≥ 4.1 with readxl, ggplot2, patchwork and scales.
 
 ## enrichment_figures.R
 
