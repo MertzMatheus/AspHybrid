@@ -6,10 +6,10 @@ article. Items in [brackets] are filled in from the article and from
 
 ## Experimental design and RNA sequencing
 
-Six strains of three *Aspergillus* section *Fumigati* species were studied:
-*A. fumigatus* A1160 (reference), the haploid *A. spinulosporus* strains 3 and
-5845, and the allodiploid hybrid *A. latus* strains 1, 1710 and 3622
-(Steenwyk et al., 2020). Each strain was grown alone in DMEM (fungus-only
+Six strains of three *Aspergillus* species were studied: *A. fumigatus*
+A1160 (section *Fumigati*; reference), the haploid *A. spinulosporus* strains
+3 and 5845, and the allodiploid hybrid *A. latus* strains 1, 1710 and 3622
+(both section *Nidulantes*; Steenwyk et al., 2020). Each strain was grown alone in DMEM (fungus-only
 control) and in co-culture with murine macrophages [cell type], in three
 independent biological replicates per condition (6 strains × 2 conditions × 3
 replicates = 36 fungal libraries).

@@ -5,9 +5,11 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![DOI](https://zenodo.org/badge/DOI/[ZENODO_DOI].svg)](https://doi.org/[ZENODO_DOI])
 
-*Aspergillus latus* is a pathogenic allodiploid hybrid of section *Fumigati*:
+*Aspergillus latus* is a pathogenic allodiploid hybrid of section *Nidulantes*:
 its genome carries two parental subgenomes, one related to *A. spinulosporus*
-(S) and one related to *A. quadrilineatus* (Q). AspHybrid is the complete,
+(S) and one related to *A. quadrilineatus* (Q), both also of section
+*Nidulantes*. The pathogen *A. fumigatus* (section *Fumigati*) is included as
+the reference species. AspHybrid is the complete,
 reproducible workflow used in **[Article title]** ([Authors], [Journal],
 [Year], doi:[DOI]) to annotate the hybrid and its relatives, assign every
 *A. latus* gene to its parental subgenome, link genes across species, and
