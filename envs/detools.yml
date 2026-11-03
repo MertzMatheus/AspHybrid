@@ -1,4 +1,4 @@
-# Differential expression (step 11: deseq2_strains.R) and publication figures (figures/enrichment_figures.R)
+# Differential expression (step 11: deseq2_strains.R) and publication figures (figures/paper_figures.R, figures/enrichment_figures.R)
 # Create:  micromamba create -f envs/detools.yml -p /path/to/software/envs/DEtools
 name: DEtools
 channels:
@@ -11,3 +11,4 @@ dependencies:
   - r-ggplot2
   - r-scales
   - r-readxl
+  - r-patchwork
